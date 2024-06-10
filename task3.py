@@ -1,4 +1,3 @@
-print('___Welcome___')
 year = int(input("How many years service do you have ? : "))
 
 if year >5:

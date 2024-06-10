@@ -8,4 +8,4 @@ elif city=="jaipur":
     print("Jal Mahal")
 
 else:
-    print('no monument found')  
+    print(' no monument found')  

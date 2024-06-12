@@ -22,7 +22,7 @@ else:
 
     if b>c:
         if b>d:
-         print("Greatest number is : ",b)
+            print("Greatest number is : ",b)
 
         else:
             print("Greatest number is : ",d) 

@@ -1,8 +1,8 @@
-a="Welcome to all"
-b=input("Enter a word or letter ")
+a="Welcome"
+b=input("Enter a word or letter : ")
 
 if b in a:
-    print("yes")
+    print("Present")
 
 else:
-    print("no")
+    print("Absent")

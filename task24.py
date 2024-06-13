@@ -1,6 +1,6 @@
-a = int(input("Enter numbers : "))
-reverse=0
+a = str(input("Enter word : "))
+reverse=""
 
 for digit in str(a)[::-1]:
-    reverse=reverse*10+int(digit)
-print("Reverse order is ",reverse)
+    reverse=reverse+str(digit)
+print("Reverse order is : ",reverse)

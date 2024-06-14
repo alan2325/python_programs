@@ -1,4 +1,7 @@
-for i in range(4):
-    rev=rev+i
+row=4
 
-    print(' *',end='')
+for i in range(row):
+    if i%2==0:
+        print("  * # *")
+    else:
+        print("  # * #")    

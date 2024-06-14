@@ -1,7 +1,2 @@
-rows = 3
-cols = 3
-
-for i in range(rows):
-    for j in range(cols):
-        print(' *',end='')
-    print()
+for i in range(1,5):
+        print("*"*i)

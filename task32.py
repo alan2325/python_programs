@@ -32,9 +32,11 @@ for i in range(4):
         print(i+j,end=" ")
     print()       
 
-a=0
-for i in range(3):
-    for j in range(3):
-        a+=2
-        print(a,end=" ")
-    print()    
+
+
+# a=0
+# for i in range(3):
+#     for j in range(3):
+#         a+=2
+#         print(a,end=" ")
+#     print()    

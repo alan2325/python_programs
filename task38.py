@@ -7,3 +7,5 @@
 #     print(i * i, end=" ")
 
 
+for i in range(5):
+    print(i**3, end=" ")    

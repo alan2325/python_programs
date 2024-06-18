@@ -48,6 +48,8 @@
 # print("sum :",sum)
 
 
+
+
 # sum of even odd nat
 
 # a=int(input("Enter starting value : "))
@@ -69,8 +71,9 @@
 # print("sum of odd: ",odd)
 # print("sum of natural : ",sum)      
    
-# factorial of a no
 
+
+# factorial of a no
 
 a=int(input("Enter a number : "))
 i=1

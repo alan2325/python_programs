@@ -71,8 +71,9 @@
    
 # factorial of a no
 
-i=1
+
 a=int(input("Enter a number : "))
+i=1
 fat=1
 while i<=a: 
     fat*=i

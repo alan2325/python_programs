@@ -46,4 +46,26 @@ while a<=b:
         sum+=a
     a+=1
 print("sum :",sum)
+
+
+# sum of even odd nat
+
+a=int(input("Enter starting value : "))
+b=int(input("Enter ending value : "))
+
+sum=0 
+odd=0
+even=0
+while a<=b:
+    sum+=a
+
+    if a%2==1:
+        odd+=a
+    
+    else:
+        even+=a
+    a+=1
+print("sum of even : ",even)
+print("sum of odd: ",odd)
+print("sum of natural : ",sum)      
    

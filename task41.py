@@ -35,11 +35,23 @@
 #     i+=1
 
 
-a='welcome'
-l=len(a)
+# a='welcome'
+# l=len(a)
+# i=0
+# rev=''
+# while i<l:
+#     rev=a[i]+rev
+#     i+=1
+# print(rev)
+
+
+
+a=0
+b=1
 i=0
-rev=''
-while i<l:
-    rev=a[i]+rev
+while i<=10:
+    print(a)
+    c=a+b
+    a=b
+    b=c
     i+=1
-print(rev)

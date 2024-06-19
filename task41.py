@@ -18,10 +18,18 @@
 # print(rev)
 
 
-a=int(input('enter a number : '))
-sum=0
-while a>0:
-    d=a%10
-    a//=10
-    sum+=d
-print(sum)
+# a=int(input('enter a number : '))
+# sum=0
+# while a>0:
+#     d=a%10
+#     a//=10
+#     sum+=d
+# print(sum)
+
+
+a='welcome'
+l=len(a)
+i=0
+while i<l:
+    print(a[i])
+    i+=1

@@ -6,10 +6,22 @@
 
 
 
-a=int(input('enter a number'))
+
+a=int(input('enter a number : '))
 rev=0
 while a>0:
     d=a%10
     rev=(rev*10)+d
     a//=10
+    if a==0:
+        break
 print(rev)
+
+
+# a=int(input('enter a number'))
+# sum=0
+# while a>0:
+#     d=a%10
+#     a//=10
+#     sum+=d
+# print(sum)

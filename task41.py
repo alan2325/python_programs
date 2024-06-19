@@ -27,9 +27,19 @@
 # print(sum)
 
 
+# a='welcome'
+# l=len(a)
+# i=0
+# while i<l:
+#     print(a[i])
+#     i+=1
+
+
 a='welcome'
 l=len(a)
 i=0
+rev=''
 while i<l:
-    print(a[i])
+    rev=a[i]+rev
     i+=1
+print(rev)

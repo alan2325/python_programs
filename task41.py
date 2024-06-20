@@ -35,14 +35,14 @@
 #     i+=1
 
 
-# a='welcome'
-# l=len(a)
-# i=0
-# rev=''
-# while i<l:
-#     rev=a[i]+rev
-#     i+=1
-# print(rev)
+a='welcome'
+l=len(a)
+i=0
+rev=''
+while i<l:
+    rev=a[i]+rev
+    i+=1
+print(rev)
 
 
 

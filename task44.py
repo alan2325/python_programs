@@ -46,10 +46,10 @@
 # print(L)
 
 L=[10,20,[11,12]]
-    remove
+    # remove
 L.remove([11,12])
-    pop
+    # pop
 L.pop()
-    clear
-# L.clear()
+    # clear
+L.clear()
 print(L)

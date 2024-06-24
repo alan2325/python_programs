@@ -13,10 +13,10 @@ print("Largest number in the list:", largest_number)
 
                  #or
 
-# numbers = [15, 22, 8, 19, 42, 3, 89, 16, 56, 1]
-# print(numbers)
-# largest_number = numbers[0]
-# for i in range(1, len(numbers)):
-#     if numbers[i] > largest_number:
-#         largest_number = numbers[i]
-# print("The largest number in the list is:",largest_number)
+numbers = [15, 22, 8, 19, 42, 3, 89, 16, 56, 1]
+print(numbers)
+largest_number = numbers[0]
+for i in range(1, len(numbers)):
+    if numbers[i] > largest_number:
+        largest_number = numbers[i]
+print("The largest number in the list is:",largest_number)

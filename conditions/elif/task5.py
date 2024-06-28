@@ -1,19 +1,16 @@
-day=int(input("Enter number from 1 to 7 "))
+a=int(input("Enter first number : "))
+b=int(input("Enter second number : "))
+c=int(input("Enter third number : "))
+d=int(input("Enter fourth number : "))
 
-if day==1:
-    print(' sunday')
-elif day==2:
-    print(' monday') 
-elif day==3:
-    print(' tuesday') 
-elif day==4:
-    print(' wednesday') 
-elif day==5:
-    print(' thursday') 
-elif day==6:
-    print(' friday') 
-elif day==7:
-    print(' saturday') 
+if a>b and a>c and a>d:
+        print("Greatest number is : ",a)
+
+elif b>c and b>d and b>a:
+        print("Greatest number is : ",b)
+
+elif c>d and c>b and c>a:
+        print("Greatest number is : ",c)
 
 else:
-    print(' invalid id')
+        print("Greatest number is : ",d)

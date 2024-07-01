@@ -3,6 +3,10 @@ a=int(input("Enter a number : "))
 for i in range(len(num)):
     if a in num:
         i=0
+                        rev=''
+                    while i<l:
         # print("Values are : ",num[i])
-        print(i+a)
+        rev=a[i]+rev
+        i+=1
+        print(rev)
    

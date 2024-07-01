@@ -56,3 +56,18 @@ else:
 #     result.append(num[int(digit)])
 
 # print(" ".join(result))
+
+
+
+
+# num = {
+#     0: 'zero', 1: 'one', 2: 'two', 3: 'three', 4: 'four',
+#     5: 'five', 6: 'six', 7: 'seven', 8: 'eight', 9: 'nine'
+# }
+
+# a = int(input("Enter a number: "))
+
+# if a in num:
+#     print(num[a])
+# else:
+#     print("Invalid input.")

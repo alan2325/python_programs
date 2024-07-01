@@ -9,7 +9,3 @@ print(std['name'])
     # add key(field)
 std['mark']=100
 print(std['mark'])
-
-    # print key & values
-for i in std:
-    print(i,std[i])

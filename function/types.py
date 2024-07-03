@@ -21,7 +21,7 @@
 
 
 
-            # 4.arbritaty 
+            # 4.arbitrary 
 # def add(*a):
 #     return(a)
 # print(add('dheb',23))
@@ -29,7 +29,7 @@
 # print(add(50))
 
 
-            # 5.arbritaty keyword
+            # 5.arbitrary keyword
 def add(**a):
     return a
 print(add(a='dheb',b=23))

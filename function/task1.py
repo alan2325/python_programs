@@ -1,42 +1,37 @@
-# print("helo")
-# def fun1():
-#     print("Welcome")
+def add(a,b):
+    return a+b 
+    
+def sub(a,b):
+    return a-b 
+    
+def div(a,b):
+    return a/b 
+   
+def mul(a,b):
+    return a*b 
+   
+def num():
+    a=int(input("Enter a number : "))
+    b=int(input("Enter another number : "))
+    return a,b
 
-# print("ok")
-# fun1()
+while True:
+    print("1.add \n2.sub \n3.div \n4.mul  ")
+    c=int(input("Enter your choice : "))
 
-
-
-# print("helo")
-# a=20                #global veriable
-# def fun1():
-#     a=15            #local veriable
-#     a=a+10
-#     print("local",a)
-
-# print("global",a)
-# fun1()
-
-
-
-             
-# def fun1():
-#     global a
-#     a=15             #global veriable
-#     print("local",a)
-
-# fun1()
-
-# print("global",a)
-
-
-
-
-
-
-def fun1():
-    c=20
-    return c,50
-# print(fun1())
-c1,d1=fun1()
-print(c1,d1)
+    if c==1:
+        a,b=num()
+        print(add(a,b))
+    elif c==2:
+        a,b=num()
+        print("sub is : ",sub(a,b))
+    elif c==3:
+        a,b=num()
+        print("div is : ",div(a,b))
+    elif c==4:
+        a,b=num()
+        print("mul is : ",mul(a,b))
+    elif c==5:
+        break
+    else:
+        print("Invalid input")

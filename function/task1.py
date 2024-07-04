@@ -3,12 +3,10 @@ def add(a,b):
     
 def sub(a,b):
     return a-b 
-    
-def div(a,b):
-    return a/b 
-   
-def mul(a,b):
-    return a*b 
+     
+div=lambda a,b:a/b
+
+mul=lambda a,b:a*b
    
 def num():
     a=int(input("Enter a number : "))
@@ -16,8 +14,8 @@ def num():
     return a,b
 
 while True:
-    print("1.add \n2.sub \n3.div \n4.mul  ")
-    c=int(input("Enter your choice : "))
+    # print("1.add \n2.sub \n3.div \n4.mul \n5.End ")
+    c=int(input("1.add \n2.sub \n3.div \n4.mul \n5.End \n Enter your choice : "))
 
     if c==1:
         a,b=num()

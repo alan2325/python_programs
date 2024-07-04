@@ -45,6 +45,9 @@
 
 # clear
 
-my_list = [1, 2, 3, 4]
-my_list.clear()
-print(my_list)
+# my_list = [1, 2, 3, 4]
+# my_list.clear()
+# print(my_list)
+
+
+

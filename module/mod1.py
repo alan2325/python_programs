@@ -13,29 +13,29 @@
     #task
 
             # 1.positional argument
-# def add(a,b):
-#     return a+b
+def add1(a,b):
+    return a+b
 
 
 
             # 2.default
-# def add(a,b=20):
-#     return a,b
+def add2(a,b=20):
+    return a,b
 
 
 
             # 3.keyword
-# def add(a,b):
-#     print('name : ',a)
-#     print('age',b)
+def add3(a,b):
+    print('name : ',a)
+    print('age',b)
 
 
 
             # 4.arbitrary 
-# def add(*a):
-#     return(a)
+def add4(*a):
+    return(a)
 
 
             # 5.arbitrary keyword
-def add(**a):
+def add5(**a):
     return a

@@ -1,0 +1,2 @@
+def up (data):
+    for 

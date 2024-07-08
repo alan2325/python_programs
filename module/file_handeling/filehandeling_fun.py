@@ -20,9 +20,9 @@
 
             #or
 
-# Open the file in 'x' mode to create it (this will raise an error if the file already exists)
-with open('python_programs/module/file_handeling/names.txt', 'x') as f:
-    # Concatenate the strings into a single string
-    data = 'alal' '\n' + 'bla' + '\n' + 'sreeraj'
-    # Write the concatenated string to the file
-    f.write(data)
+l=int(input("Enter limit : "))
+d=[]
+for d in range(l):
+    name=str(input("Enter names : "))
+    f= open('python_programs/module/file_handeling/names.txt', 'x')    
+    f.write(name)

@@ -1,4 +1,4 @@
-f = open("/file_handling/table.txt", "w")
+f = open("python_programs/module/file_handling/mul_task/table2.txt", "w")
 a = int(input("Enter the number :"))
 for i in range(1,a+1):
     for j in range(1, 11):

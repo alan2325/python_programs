@@ -119,8 +119,8 @@
 #     print(a[::1])
 #     letter+=1
 # print("Number of words is : ",letter)
-# print(let)
-# print(cap)
+# print("Number of letter is : ",let)
+# print("Number of capletter is : ",cap)
 # print(let-cap)
 
 

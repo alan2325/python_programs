@@ -77,4 +77,4 @@ for i in range(l):
             word+=1
     # print(a[::-1])
     word+=1
-print(word)
+print("Number of words is : ",word)

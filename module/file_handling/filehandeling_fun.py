@@ -56,9 +56,25 @@
 # f=open("python_programs/module/file_handling/new.txt","r")
 # print(f.readlines())
 
+    #reverse of all
+# f=open("python_programs/module/file_handling/new.txt","r")
+# l=len(f.readlines())
+# f.seek(0)
+# for i in range(l):
+#     a=f.readline().strip()
+#     print(a[::-1])
+
+
+    #count words
 f=open("python_programs/module/file_handling/new.txt","r")
 l=len(f.readlines())
 f.seek(0)
+word=0
 for i in range(l):
     a=f.readline().strip()
-    print(a[::-1])
+    for j in a:
+        if j== ' ':
+            word+=1
+    # print(a[::-1])
+    word+=1
+print(word)

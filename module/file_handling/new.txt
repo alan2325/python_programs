@@ -1,2 +1,2 @@
-python
-java is good
+Python
+Java is good

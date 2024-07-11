@@ -66,15 +66,59 @@
 
 
     #count words
+# f=open("python_programs/module/file_handling/new.txt","r")
+# l=len(f.readlines())
+# f.seek(0)
+# word=0
+# for i in range(l):
+#     a=f.readline().strip()
+#     for j in a:
+#         if j== ' ':
+#             word+=1
+#     # print(a[::-1])
+#     word+=1
+# print("Number of words is : ",word)
+
+
+#     #count letter
+# f=open("python_programs/module/file_handling/new.txt","r")
+# l=len(f.readlines())
+# f.seek(0)
+# letter=0
+# let=0
+# for i in range(l):
+#     a=f.readline().strip()
+#     for j in a:
+#         if j== ' ':
+#             letter+=1
+#         else:
+#             let+=1
+#     print(a[::1])
+#     letter+=1
+# print("Number of words is : ",letter)
+# print("Number of letter is : ",let)
+
+
+
+    #count capital & small letter
 f=open("python_programs/module/file_handling/new.txt","r")
 l=len(f.readlines())
 f.seek(0)
-word=0
+letter=0
+let=0
+cap=0
 for i in range(l):
     a=f.readline().strip()
     for j in a:
         if j== ' ':
-            word+=1
-    # print(a[::-1])
-    word+=1
-print("Number of words is : ",word)
+            letter+=1
+        else:
+            let+=1
+            if j.isupper():
+                cap+=1
+    print(a[::1])
+    letter+=1
+print("Number of words is : ",letter)
+print(let)
+print(cap)
+print(let-cap)

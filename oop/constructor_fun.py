@@ -8,6 +8,3 @@ class synnefo:  #class
         print("php",self.database)
 
 akhil=synnefo()
-# akhil.python()
-# akhil.php()
-# print(akhil.database)

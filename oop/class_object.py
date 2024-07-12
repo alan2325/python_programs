@@ -1,5 +1,5 @@
-class synnefo:
-    def python():
+class synnefo:  #class
+    def python():   #object
         print("pytho")
 
 akhil=synnefo

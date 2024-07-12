@@ -1,4 +1,4 @@
-class synnefo:
+class synnefo:  
     def python():
         print("pytho")
 

@@ -8,4 +8,4 @@ class synnefo:  #class
 akhil=synnefo()
 akhil.python()
 akhil.php()
-print(akhil.database)
+print(akhil.database)8

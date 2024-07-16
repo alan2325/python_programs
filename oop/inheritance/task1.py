@@ -79,30 +79,33 @@
         #5.hybrid
 class a:
     def a1(self):
-            print('a1')
+            print('mal')
 class b:
     def b1(self):
-        print('b1')
+        print('eng')
 class f:
     def f1(self):
-         print('f1')
+         print('hin')
 class c(a,b):
      def c1(self):
-          print('c1')
+          print('aa')
 class d(b,f):
      def d1(self):
-         print("d1")
+         print("bb")
 class e(c,d):
      def e1(self):
-          print('e1') 
+          print('cc') 
 
 
 
 ee=e()
-ee.e1()
-ee.c1()
 ee.a1()
 ee.b1()
-ee.f1()
+ee.c1()
 ee.d1()
-ee.a1()
+ee.e1()
+ee.f1()
+
+
+
+

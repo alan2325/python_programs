@@ -12,6 +12,12 @@
 #     print()
 
 
+
+
+# 1   
+# 4   9   
+# 9   16  25
+
 for i in range(1,4):
     for j in range(i):
         print((i+j)**2,end=" ")

@@ -5,3 +5,11 @@ for i in range(row):
         print("  * # *")
     else:
         print("  # * #")    
+
+
+
+
+''' *   #   *
+    #   *   #
+    *   #   *
+    #   *   #   '''

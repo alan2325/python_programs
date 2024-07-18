@@ -22,6 +22,15 @@
 
 
 
+
+
+
+# A   
+# A   B   
+# A   B   C 
+# A   B 
+# A 
+
 b=3
 a=64
 for i in range(1,b+1):

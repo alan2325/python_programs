@@ -33,3 +33,18 @@ print(re.search('b.?',a))
 
 #6
 print(re.search('c.+',a))
+
+#7
+print(re.search('[a-z].',a))
+
+#8
+print(re.search('[a-z].+',a))
+
+#9
+print(re.search('[a-z].*',a))
+
+#10
+print(re.search('[A-Z].?',a))
+
+#11
+print(re.search('[A-Z]..',a))

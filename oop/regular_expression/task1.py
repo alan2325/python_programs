@@ -52,12 +52,31 @@ import re
 
 a='Aabcd123'
 
-# #12
+# #12 and fun
 # print(re.search('[a-z]',a))
 # print(re.search('[A-Z][a-z].*[1-9]',a))
 
-#13 or fun
-print(re.search('a-zA-Z0-9',a))
+# #13 or fun
+# print(re.search('a-zA-Z0-9',a))
 
-#14 
-print(re.search('3$',a))
+# #14 to find last value is the input
+# print(re.search('3$',a))
+
+# #15
+# print(re.search('6-9.{3}',a))
+
+
+
+
+
+a=''
+a=str(input("enter phonenumber : "))
+f=0
+
+if re.search('[6-9].{9}',a):
+        f=1
+        print(re.search('[6-9].{9}',a))
+        print("valid number")
+if f==0:
+        print('invalid input !')
+

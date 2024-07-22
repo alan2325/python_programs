@@ -71,12 +71,15 @@ a='Aabcd123'
 
 a=''
 a=str(input("enter phonenumber : "))
-f=0
 
-if re.search('[6-9].{9}',a):
-        f=1
-        print(re.search('[6-9].{9}',a))
-        print("valid number")
-if f==0:
-        print('invalid input !')
+if len(a)==10 and a.isdigit():
+        f=0
+        if re.search('[6-9].{9}',a):
+                f=1
+                print(re.search('[6-9].{9}',a))
+                print("valid number")
+        if f==0:
+                print('invalid input !')
 
+else:
+        print("invalid input")

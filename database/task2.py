@@ -25,15 +25,15 @@ except:
 
 data=con.execute("select * from student ")
 print(data)
-# for i in data:
+# for i in data: ##print all
 #     print(i)
 
 
 
 
 
-print("{:<15}{:<15}{:<15}".format("age","name","mark"))
-print('_'*45)
+print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
+print('_'*25)
 for i in data:
-    print("{:<15}{:<15}{:<15}".format(i[0],i[1],i[2])) 
+    print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
 print()

@@ -23,14 +23,28 @@ except:
 
 
 
-data=con.execute("select * from student ")
-print(data)
-# for i in data: ##print all
-#     print(i)
+# data=con.execute("select * from student ")
+# print(data)
+# # for i in data: ##print all
+# #     print(i)
 
 
 
 
+
+# print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
+# print('_'*25)
+# for i in data:
+#     print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
+# print()
+
+
+
+        ###find
+
+name=str(input("Enter name : "))
+
+data=con.execute("select * from student where name=? ",(name,))
 
 print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
 print('_'*25)

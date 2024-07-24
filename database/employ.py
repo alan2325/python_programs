@@ -37,10 +37,10 @@ while True:
 
 
 
-        print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format("name","age","email","salary","position","experiance")) ##print in a table
+        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
         print('_'*50)
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
         
 
@@ -63,10 +63,10 @@ while True:
         con.commit()
         data=con.execute("select * from employee")
 
-        print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format("name","age","email","salary","position","experiance")) ##print in a table
+        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
         print('_'*50)
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
         
 
@@ -80,10 +80,10 @@ while True:
         con.commit()
         data=con.execute("select * from employee")
 
-        print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format("name","age","email","salary","position","experiance")) ##print in a table
+        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
         print('_'*50)
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
         
 
@@ -92,10 +92,10 @@ while True:
 
         data=con.execute("select * from employee")
 
-        print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format("name","age","email","salary","position","experiance")) ##print in a table
+        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
         print('_'*50)
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
         
 
@@ -106,10 +106,10 @@ while True:
 
         data=con.execute("select * from employee where name=? ",(name,))
 
-        print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format("name","age","email","salary","position","experiance")) ##print in a table
+        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
         print('_'*50)
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<5}{:<5}{:<5}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
         
 

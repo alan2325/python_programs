@@ -13,7 +13,7 @@ while True:
     if ch ==1:
         l= int (input("Enter limit : "))
         for i in range(l):
-            print('_'*50)
+            print('_'*80)
             name= str(input("Enter name : "))
             age =int(input("Enter age : "))
             email = str(input("Enter email : "))
@@ -38,7 +38,7 @@ while True:
 
 
         print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*50)
+        print('_'*80)
         for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
@@ -64,7 +64,7 @@ while True:
         data=con.execute("select * from employee")
 
         print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*50)
+        print('_'*80)
         for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
@@ -81,7 +81,7 @@ while True:
         data=con.execute("select * from employee")
 
         print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*50)
+        print('_'*80)
         for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
@@ -107,7 +107,7 @@ while True:
         data=con.execute("select * from employee where name=? ",(name,))
 
         print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*50)
+        print('_'*80)
         for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()

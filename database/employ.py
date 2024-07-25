@@ -57,18 +57,25 @@ while True:
         #     pass
 
 
-        name=str(input("Enter old name : "))
-        new=str(input("Enter new name : "))
-        con.execute("update employee set name=? where name =?",(new,name))
-        con.commit()
-        data=con.execute("select * from employee")
-
-        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*80)
-        for i in data:
-            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
-        print()
         
+        name=str(input("Enter old name : "))
+        data=con.execute("select * from employee where name=? ",(name,))
+        found=False
+        for i in data:
+            found=True
+            new=str(input("Enter new name : "))
+            con.execute("update employee set name=? where name =?",(new,name))
+            con.commit()
+            data=con.execute("select * from employee")
+            print("Updated succesfully !")
+        #     print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
+        #     print('_'*80)
+        # for i in data:
+        #     print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+        #     print()
+            
+        if not found:
+            print("Invalid Input !")
 
 
     elif ch ==3:
@@ -76,16 +83,23 @@ while True:
 
 
         name=str(input("Enter name : "))
-        con.execute("delete from employee where name =?",(name,))
-        con.commit()
-        data=con.execute("select * from employee")
-
-        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*80)
+        data=con.execute("select * from employee where name=? ",(name,))
+        found=False
         for i in data:
-            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
-        print()
-        
+            found=True
+            con.execute("delete from employee where name =?",(name,))
+            con.commit()
+            data=con.execute("select * from employee")
+            print("Deleted duccessfully !")
+
+            # print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
+            # print('_'*80)
+            # # for i in data:
+            # print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
+            # print()
+        if not found:
+            print("Invalid Input !")
+
 
     
     elif ch ==4:
@@ -93,7 +107,7 @@ while True:
         data=con.execute("select * from employee")
 
         print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*50)
+        print('_'*80)
         for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
         print()
@@ -102,17 +116,27 @@ while True:
     elif ch ==5:
 
 
-        name=str(input("Enter name : "))
+        sname=str(input("Enter name : "))
 
-        data=con.execute("select * from employee where name=? ",(name,))
 
-        print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
-        print('_'*80)
+        data=con.execute("select * from employee where name=? ",(sname,))
+        
+        found = False
         for i in data:
+
+            print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format("name","age","email","salary","position","experiance")) ##print in a table
+            print('_'*80)
+            # for i in data:
             print("{:<15}{:<5}{:<15}{:<15}{:<15}{:<15}".format(i[0],i[1],i[2],i[3],i[4],i[5])) 
-        print()
+            print()
+            found=True
+        if not found:
+            print("Invalid Input !")
         
 
     elif ch ==6:
         print("You had exited")
         break    
+
+    else:
+         ("invalid input")

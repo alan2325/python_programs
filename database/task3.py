@@ -2,9 +2,7 @@ import sqlite3
 
 con = sqlite3.connect("task1.db")#db connection
 
-# ch=int(input("Enter choice \1.add \2.update \3.delete"))
-# while true:
-#     if ch ==1:
+# 
         ####fund name ,user input
 
 # name=str(input("Enter name : "))
@@ -21,7 +19,7 @@ con = sqlite3.connect("task1.db")#db connection
 
             ###update name ,user input
 
-##elif ch==2:
+#
 # try:
 #     con.execute("create table student(age int,name text,mark real)")#create table
 # except:
@@ -40,19 +38,37 @@ con = sqlite3.connect("task1.db")#db connection
 #     print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
 # print()
 
-## elif ch ==3:
+#
 
+
+#         ####delete
+# try:
+#     con.execute("create table student(age int,name text,mark real)")#create table
+# except:
+#     pass
+
+
+# name=str(input("Enter name : "))
+# con.execute("delete from student where name =?",(name,))
+# con.commit()
+# data=con.execute("select * from student")
+
+# print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
+# print('_'*25)
+# for i in data:
+#     print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
+# print()
+
+
+        ###like
+
+      
 try:
     con.execute("create table student(age int,name text,mark real)")#create table
 except:
     pass
 
-
-name=str(input("Enter name : "))
-con.execute("delete from student where name =?",(name,))
-con.commit()
-data=con.execute("select * from student")
-
+data =con.execute("select * from student where name like '_r%'")
 print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
 print('_'*25)
 for i in data:

@@ -2,6 +2,12 @@ import sqlite3
 
 con = sqlite3.connect("task1.db")#db connection
 
+     
+try:
+    con.execute("create table student(age int,name text,mark real)")#create table
+except:
+    pass
+
 # 
         ####fund name ,user input
 
@@ -62,15 +68,29 @@ con = sqlite3.connect("task1.db")#db connection
 
         ###like
 
-      
-try:
-    con.execute("create table student(age int,name text,mark real)")#create table
-except:
-    pass
+ 
 
-data =con.execute("select * from student where name like '_r%'")
+# data =con.execute("select * from student where name like '_r%'")
+# print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
+# print('_'*25)
+# for i in data:
+#     print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
+# print()
+
+
+        ### Order - asscending & descinding order
+
+# data =con.execute("select * from student order by name ")##or 'by name desc'
+# print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
+# print('_'*25)
+# for i in data:
+#     print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
+# print()
+
+        ####group by
+data =con.execute("select name,count(mark)from student group by name ")##group by   ####max,min,count,avg,sum
 print("{:<15}{:<5}{:<5}".format("name","age","mark")) ##print in a table
 print('_'*25)
 for i in data:
-    print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
-print()
+    # print("{:<15}{:<5}{:<5}".format(i[1],i[0],i[2])) 
+    print(i)

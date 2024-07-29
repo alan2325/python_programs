@@ -37,6 +37,23 @@ while True:
                         (id, name, age, email, pos, sal))
             em.commit()
     elif ch == 2:
+
+
+        name=str(input("Enter old name : "))
+        data=em.execute("select * from employee where name=? ",(name,))
+        found=False
+        for i in data:
+            found=True
+            new=str(input("Enter new name : "))
+            em.execute("update employee set name=? where name =?",(new,name))
+            em.commit()
+            data=em.execute("select * from employee")
+            print("Updated succesfully !")
+        
+
+
+
+
         print('_'*50)
         id = int(input('enter id of employee : '))
         name = input('enter your new name : ')

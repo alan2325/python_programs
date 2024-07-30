@@ -92,43 +92,75 @@ while True:
         employees = cursor.fetchall()
         
         if employees:
+
             while True:
-                print('Order by :\n1. Id \n2. Name \n3. Age\n4. Salary\n5. Exit')
-                och = int(input('Enter your choice: '))
+                viewch = int(input('View by :\n1. Order\n2. Like \n3. Group By\n4. Exit \nEnter your choice:'))
+
+
+                if viewch == 1:
+
+
+
+                    while True:
+                        print('Order by :\n1. Id \n2. Name \n3. Age\n4. Salary\n5. Exit')
+                        och = int(input('Enter your choice: '))
+                        
+                        if och ==1:
+                            cursor.execute("select * from employ order by emp_id ")##or 'by name desc'
+                            employees = cursor.fetchall()
                 
-                if och ==1:
-                    data =cursor.execute("select * from employ order by emp_id ")##or 'by name desc'
-                    print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
-                    print('_'*60)
-                    for emp in employees:
-                        print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
-                    print()
-                elif och == 2:
+                            print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
+                            print('_'*60)
+                            for emp in employees:
+                                print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
+                            print()
+                        elif och == 2:
 
 
-                    data =cursor.execute("select * from employ order by name ")##or 'by name desc'
-                    print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
-                    print('_'*60)
-                    for emp in employees:
-                        print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
-                    print()
-                elif och == 3:
+                            cursor.execute("select * from employ order by name ")##or 'by name desc'
+                            employees = cursor.fetchall()
+                
+                            print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
+                            print('_'*60)
+                            for emp in employees:
+                                print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
+                            print()
+                        elif och == 3:
 
-                    data =cursor.execute("select * from employ order by age ")##or 'by name desc'
-                    print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
-                    print('_'*60)
-                    for emp in employees:
-                        print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
-                    print()
-                elif och == 4:
-                    data =cursor.execute("select * from employ order by salary ")##or 'by name desc'
-                    print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
-                    print('_'*60)
-                    for emp in employees:
-                        print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
-                    print() 
-                elif och == 5:
-                    break
+                            cursor.execute("select * from employ order by age ")##or 'by name desc'
+                            employees = cursor.fetchall()
+                
+                            print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
+                            print('_'*60)
+                            for emp in employees:
+                                print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
+                            print()
+                        elif och == 4:
+                            cursor.execute("select * from employ order by salary desc ")##or 'by name desc'
+                            employees = cursor.fetchall()
+                
+                            print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format("Id","Name","Age","Email","Position","Salary")) ##print in a table
+                            print('_'*60)
+                            for emp in employees:
+                                print("{:<10}{:<10}{:<10}{:<10}{:<10}{:<10}".format(emp[0],emp[1],emp[2],emp[3],emp[4],emp[5])) 
+                            print() 
+                        elif och == 5:
+                            break
+                elif viewch == 2:
+                    while True:
+                        print('Like by :\n1. Id \n2. Name \n3. Age\n4. Salary\n5. Exit')
+                        lch = int(input('Enter your choice: '))
+                        
+                        if lch ==1:
+                            cursor.execute("select * from employ order by emp_id ")##or 'by name desc'
+                            employees = 
+
+
+
+                elif viewch == 3:
+                    while True:
+                        
+                
             # print('_' * 50)
             # for emp in employees:
             #     print(f'ID: {emp[0]}, Name: {emp[1]}, Age: {emp[2]}, Email: {emp[3]}, Position: {emp[4]}, Salary: {emp[5]}')

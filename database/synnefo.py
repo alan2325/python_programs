@@ -21,7 +21,7 @@ cursor.execute('''
 ''')
 
 while True:
-    print('\n1.add\n2.update\n3.delete\n4.search\n5.view all\n6.Exit')
+    print('\n1.Add\n2.Update\n3.Delete\n4.Search\n5.View all\n6.Exit')
     ch = int(input('enter your choice: '))
     if ch == 1:
         l= int (input("Enter limit : "))

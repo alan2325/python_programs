@@ -39,31 +39,32 @@ while True:
     elif ch == 2:
 
 
-        name=str(input("Enter old name : "))
-        data=em.execute("select * from employee where name=? ",(name,))
+        oid=str(input("Enter old id : "))
+        data=cursor.execute("select * from employ WHERE emp_id=%s",(oid,))
         found=False
         for i in data:
             found=True
-            new=str(input("Enter new name : "))
-            em.execute("update employee set name=? where name =?",(new,name))
+            # new=str(input("Enter new name : "))
+            # em.execute("update employee set name=? where name =?",(new,name))
+            # em.commit()
+            # data=em.execute("select * from employee")
+            
+
+
+
+
+            print('_'*50)
+            id = int(input('enter id of employee : '))
+            name = input('enter your new name : ')
+            age = int(input('enter your new age : '))
+            email = input('enter your new email : ')
+            pos = input('enter new position : ')
+            sal = int(input('enter ur salary :'))
+            cursor.execute('UPDATE employ SET name=%s, age=%s, email=%s, position=%s, salary=%s  WHERE emp_id=%s',
+                        (name, age, email, pos, id, sal))
             em.commit()
-            data=em.execute("select * from employee")
             print("Updated succesfully !")
         
-
-
-
-
-        print('_'*50)
-        id = int(input('enter id of employee : '))
-        name = input('enter your new name : ')
-        age = int(input('enter your new age : '))
-        email = input('enter your new email : ')
-        pos = input('enter new position : ')
-        sal = int(input('enter ur salary :'))
-        cursor.execute('UPDATE employ SET name=%s, age=%s, email=%s, position=%s, salary=%s  WHERE emp_id=%s',
-                       (name, age, email, pos, id, sal))
-        em.commit()
     elif ch == 3:
         id = int(input('enter id of employ to delete: '))
         cursor.execute('DELETE FROM employ WHERE emp_id=%s', (id,))

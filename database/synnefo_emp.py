@@ -150,16 +150,79 @@ while True:
                     while True:
                         print('Like by :\n1. Id \n2. Name \n3. Age\n4. Salary\n5. Exit')
                         lch = int(input('Enter your choice: '))
-                        
-                        if lch ==1:
-                            cursor.execute("select * from employ order by emp_id ")##or 'by name desc'
-                            employees = 
+                        if lch == 1:
+                            ch = input('Enter ID to search for in id (e.g., "1"): ')
+                            cursor.execute('SELECT * FROM employ WHERE emp_id LIKE %s ORDER BY age DESC', (f'%{ch}%',))
+                            data = cursor.fetchall()
+                            print('{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}'.format('ID', 'Name', 'Age', 'Email', 'Position', 'Salary'))
+                            print('-' * 75)
+                            if data:
+                                for row in data:
+                                    print("{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}".format(row[0], row[1], row[2], row[3], row[4], row[5]))
+                            else:
+                                print('No matching records found')
 
+
+
+                        elif lch ==2:
+
+
+                            ch = input('Enter ID to search for in Nmae (e.g., "Bla"): ')
+                            cursor.execute('SELECT * FROM employ WHERE name LIKE %s ORDER BY age DESC', (f'%{ch}%',))
+                            data = cursor.fetchall()
+                            print('{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}'.format('ID', 'Name', 'Age', 'Email', 'Position', 'Salary'))
+                            print('-' * 75)
+                            if data:
+                                for row in data:
+                                    print("{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}".format(row[0], row[1], row[2], row[3], row[4], row[5]))
+                            else:
+                                print('No matching records found')
+
+                        elif lch ==3:
+                            ch = input('Enter ID to search for in Age (e.g., "22"): ')
+                            cursor.execute('SELECT * FROM employ WHERE age LIKE %s ORDER BY age DESC', (f'%{ch}%',))
+                            data = cursor.fetchall()
+                            print('{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}'.format('ID', 'Name', 'Age', 'Email', 'Position', 'Salary'))
+                            print('-' * 75)
+                            if data:
+                                for row in data:
+                                    print("{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}".format(row[0], row[1], row[2], row[3], row[4], row[5]))
+                            else:
+                                print('No matching records found')
+
+                        elif lch ==4:
+                            ch = input('Enter ID to search for in salary (e.g., "25000"): ')
+                            cursor.execute('SELECT * FROM employ WHERE salary LIKE %s ORDER BY salary', (f'%{ch}%',))
+                            data = cursor.fetchall()
+                            print('{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}'.format('ID', 'Name', 'Age', 'Email', 'Position', 'Salary'))
+                            print('-' * 75)
+                            if data:
+                                for row in data:
+                                    print("{:<10}{:<20}{:<5}{:<30}{:<20}{:<10}".format(row[0], row[1], row[2], row[3], row[4], row[5]))
+                            else:
+                                print('No matching records found')
+
+                        elif lch ==5:
+                            break
+                        else:
+                            print("Invalid input !")
 
 
                 elif viewch == 3:
                     while True:
-                        
+                        cursor.execute('SELECT name, MAX(age) AS max_age FROM employ GROUP BY name')
+                        data = cursor.fetchall()
+                        print('{:<20}{:<10}'.format('Name', 'Max Age'))
+                        print('-' * 30)
+                        if data:
+                            for row in data:
+                                print("{:<20}{:<10}".format(row[0], row[1]))
+                        else:
+                            print('No data available')
+                elif viewch == 4:
+                    break
+                else :
+                    print("Invalid input !")
                 
             # print('_' * 50)
             # for emp in employees:

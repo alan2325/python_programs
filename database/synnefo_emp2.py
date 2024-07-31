@@ -12,9 +12,10 @@ cursor = em.cursor()
 
 # Create table if it doesn't exist
 cursor.execute('''
-    CREATE TABLE IF NOT EXISTS employ (
+    CREATE TABLE IF NOT EXISTS employ2(
         emp_id INT PRIMARY KEY,
-        
+        place text,
+        experience int
     )
 ''')
 

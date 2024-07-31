@@ -8,3 +8,5 @@ except:
     pass
 con.execute("insert into student(age,name,mark) values(22,'sreeraj',65)")#add value
 con.commit()#save
+
+

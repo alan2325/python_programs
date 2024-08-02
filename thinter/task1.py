@@ -25,7 +25,7 @@ def data():
     if vr1.get()==1:
         print("Male")
     
-    if vr1.get()==1:
+    if vr1.get()==2:
         print("female")
 
     
@@ -44,6 +44,12 @@ c1=tkinter.Checkbutton(app,text="mal",variable=v_c1)
 c1.pack()
 c2=tkinter.Checkbutton(app,text="mal",variable=v_c2)
 c2.pack()
+
+vr1=tkinter.IntVar()
+r1=tkinter.Radiobutton(app,text="Male",value=1,variable=vr1)
+r2=tkinter.Radiobutton(app,text="female",value=2,variable=vr1)
+r1.pack()
+r2.pack()
 
 
 
